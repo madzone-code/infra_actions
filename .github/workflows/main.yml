@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # Укажите вашу основную ветку
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to buitd,
+          echo test, and deploy your project.
